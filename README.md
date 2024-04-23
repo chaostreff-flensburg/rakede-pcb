@@ -10,7 +10,7 @@ Produce the PCBs with **red solder mask** and **white Silkscreen**.
 
 | color | objects | pcb layers present | notes |
 | --- | --- | --- | --- |
-| white | background | F.Silkscreen? |  |
+| white | background | F.Silkscreen |  |
 | white | w_flame | F.Silkscreen | only white silk screen could hopefully be a little translucent |
 | yellow | y_flame, y_light | none | blank FR4 should give a nice translucent yellow |
 | red | r_flame | F.Mask | only red solder mask should give a nice translucent red |
