@@ -19,3 +19,16 @@ Produce the PCBs with **red solder mask** and **white Silkscreen**.
 | dark grey | g_base | F.Cu, ??? | idk, how to differentiate from black outlines? |
 | black | b_contours, b_name | F.Cu, F.Mask | only copper coated with tin should give a nice contouring contrast |
 
+## Part sourcing
+
+| reference | reichelt.de | 
+| BT1 | [KZH 20SMD](https://www.reichelt.de/knopfzellenclip-fuer-20-mm-smd-kzh-20smd-p56574.html) |
+| SW1 | [SS SMD402](https://www.reichelt.de/schiebeschalter-1x-um-liegend-smd-ss-smd402-p112181.html) |
+
+## Design ideas
+
+- combined footprint for 0603-1206 LEDs and 5 mm LEDs that have their legs folded up on one side
+- 5 LED channels from ATtiny85
+  - 3 LEDs on lighthouse top for fast sweeping animation
+  - 2 groups of LEDs for the flame
+  - connection points to Vbat next to the MCU pads under the MCU package to substitute the MCU with solder links for static light
