@@ -21,7 +21,8 @@ Produce the PCBs with **red solder mask** and **white Silkscreen**.
 
 ## Part sourcing
 
-| reference | reichelt.de | 
+| reference | reichelt.de |
+| --- | --- |
 | BT1 | [KZH 20SMD](https://www.reichelt.de/knopfzellenclip-fuer-20-mm-smd-kzh-20smd-p56574.html) |
 | SW1 | [SS SMD402](https://www.reichelt.de/schiebeschalter-1x-um-liegend-smd-ss-smd402-p112181.html) |
 
