@@ -86,8 +86,8 @@
 		(uuid "3c1f2aff-d96d-455f-b586-6049d42c44af")
 	)
 	(fp_line
-		(start 2.2 3)
-		(end 3 3)
+		(start 1.8 0)
+		(end 2.6 0)
 		(stroke
 			(width 0.2)
 			(type default)
@@ -96,8 +96,8 @@
 		(uuid "d32bae22-abe4-408f-9c94-a09a014c8614")
 	)
 	(fp_line
-		(start 2.6 3.4)
-		(end 2.6 2.6)
+		(start 2.2 0.4)
+		(end 2.2 -0.4)
 		(stroke
 			(width 0.2)
 			(type default)
