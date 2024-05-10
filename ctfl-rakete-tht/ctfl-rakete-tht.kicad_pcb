@@ -100,7 +100,7 @@
 		(descr "CR2032 retainer clip, SMT ( http://www.farnell.com/datasheets/1505853.pdf )")
 		(tags "BC-2001 CR2032 2032 Battery Holder")
 		(property "Reference" "BT1"
-			(at 0 -11.5 135)
+			(at 0 7.778175 135)
 			(layer "B.SilkS")
 			(uuid "7354f5e4-65ca-4c41-ba41-f6c84f069bee")
 			(effects
@@ -4326,7 +4326,7 @@
 		(descr "Sub-miniature slide switch, right-angle, http://www.ckswitches.com/media/1422/js.pdf")
 		(tags "switch spdt")
 		(property "Reference" "SW1"
-			(at 0 4.800001 -45)
+			(at 0 -2.828427 -45)
 			(layer "B.SilkS")
 			(uuid "17d05f66-bcf2-4323-b534-11b61c2e9d0e")
 			(effects
@@ -4813,7 +4813,7 @@
 			(size 1.25 2.5)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(roundrect_rratio 0.2)
-			(net 2 "Net-(BT1-+)")
+			(net 3 "+3V0")
 			(pinfunction "B")
 			(pintype "passive")
 			(uuid "a596cef8-492b-43ed-8143-259d0c9a527e")
@@ -4823,7 +4823,7 @@
 			(size 1.25 2.5)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(roundrect_rratio 0.2)
-			(net 3 "+3V0")
+			(net 2 "Net-(BT1-+)")
 			(pinfunction "C")
 			(pintype "passive")
 			(uuid "b8283d1b-8283-4351-97ae-9ae1d84a8c68")
