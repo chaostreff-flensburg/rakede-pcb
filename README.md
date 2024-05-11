@@ -2,8 +2,8 @@
 
 Converting this sticker desing into a PCB that lights up its flame and lighthouse top from the bottom side using some LEDs and a coin cell battery.
 
-![rakede-sticker-98mm.svg](rakede-sticker-98mm.svg)
-![ctfl-rakete-pcb-front.png](img/ctfl-rakete-pcb-front.png)![ctfl-rakete-pcb-back.png](img/ctfl-rakete-pcb-back.png)
+![ctfl-rakete-pcb-front.png](img/ctfl-rakete-pcb-front.png)
+![ctfl-rakete-pcb-back.png](img/ctfl-rakete-pcb-back.png)
 
 ## Implementing the colors
 
