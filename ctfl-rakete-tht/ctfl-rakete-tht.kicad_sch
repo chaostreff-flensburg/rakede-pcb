@@ -3510,7 +3510,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 246.38 133.35 90)
 			(effects
 				(font
@@ -4142,7 +4142,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 195.58 133.35 90)
 			(effects
 				(font
@@ -4838,7 +4838,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 256.54 133.35 90)
 			(effects
 				(font
@@ -5048,7 +5048,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 185.42 133.35 90)
 			(effects
 				(font
@@ -5451,7 +5451,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 266.7 133.35 90)
 			(effects
 				(font
@@ -5797,7 +5797,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 205.74 133.35 90)
 			(effects
 				(font
@@ -6134,7 +6134,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "local:LED_combo_0805_5mmSMD_HandSolder"
+		(property "Footprint" "local:LED_0805_SMD_HandSolder"
 			(at 215.9 133.35 90)
 			(effects
 				(font
