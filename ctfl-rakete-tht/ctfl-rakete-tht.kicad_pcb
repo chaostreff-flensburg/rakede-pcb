@@ -93,6 +93,10 @@
 	(net 11 "unconnected-(J1-Pin_5-Pad5)")
 	(net 12 "unconnected-(J1-Pin_4-Pad4)")
 	(net 13 "unconnected-(SW1-A-Pad1)")
+	(net 14 "unconnected-(H1-Pad1)")
+	(net 15 "unconnected-(H2-Pad1)")
+	(net 16 "unconnected-(H3-Pad1)")
+	(net 17 "unconnected-(H4-Pad1)")
 	(footprint "Battery:BatteryHolder_Multicomp_BC-2001_1x2032"
 		(layer "B.Cu")
 		(uuid "04982b01-aaa1-42b4-a952-20211f82207d")
@@ -642,7 +646,7 @@
 		)
 		(fp_arc
 			(start -5.450001 8.449999)
-			(mid -8.716432 9.069825)
+			(mid -8.716433 9.069825)
 			(end -10.55541 6.3)
 			(stroke
 				(width 0.1)
@@ -1212,7 +1216,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794977)
+			(mid -1.194978 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -1507,7 +1511,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794977)
+			(mid -1.194978 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -3243,6 +3247,212 @@
 			)
 		)
 	)
+	(footprint "local:wire_pad"
+		(layer "B.Cu")
+		(uuid "32459b5b-48ac-49a3-a45d-e00f3a428d1a")
+		(at 104.6 61.6 -25)
+		(property "Reference" "H3"
+			(at 0.000001 0.499999 155)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "6dcb521f-a2ec-48aa-9982-86c1b7b2206c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 -1 155)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "d13c51c3-5983-4e62-a873-7d5cd3403516")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Footprint" "local:wire_pad"
+			(at 0 0 155)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "169044d7-8db3-4e33-98f8-f234ae0901da")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 155)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "432ee40a-daa4-4bae-a215-c3d4768f89a0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 155)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "649fa175-9aca-4534-9c90-e4a0cbd1b43c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/568526f0-85bc-4881-911c-0dec2b8ef481")
+		(sheetname "Root")
+		(sheetfile "ctfl-rakete-tht.kicad_sch")
+		(attr smd exclude_from_bom)
+		(fp_text user "${REFERENCE}"
+			(at 0 -2.500001 155)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "b51628ec-b167-40a8-8ec0-0f27d6aba4ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at 0 0 335)
+			(size 1.5 4)
+			(layers "B.Cu" "B.Paste" "B.Mask")
+			(roundrect_rratio 0.25)
+			(net 16 "unconnected-(H3-Pad1)")
+			(pinfunction "1")
+			(pintype "input+no_connect")
+			(thermal_bridge_angle 45)
+			(uuid "0bd25d9b-32d9-4903-a576-7a731778b9f5")
+		)
+	)
+	(footprint "local:wire_pad"
+		(layer "B.Cu")
+		(uuid "3e8ac905-e35f-494d-a314-89bfc04eb5ac")
+		(at 113.9 52.7 -65)
+		(property "Reference" "H4"
+			(at 0 0.499999 115)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "0f2d5aad-385a-4277-ab7f-d374915f2d3d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 -1 115)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "de799981-40e0-44e5-8883-ca6d07b7f4ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Footprint" "local:wire_pad"
+			(at 0 0 115)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "100bed5f-def0-47ca-957e-d1d450363ded")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 115)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1a8be612-28fb-4b46-82fb-f4d875c1ea85")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 115)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f844dc86-07e8-4a8e-a3cb-e42ccb5d6596")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/7ee29b9c-34ee-4e8d-a63e-89491c981e0d")
+		(sheetname "Root")
+		(sheetfile "ctfl-rakete-tht.kicad_sch")
+		(attr smd exclude_from_bom)
+		(fp_text user "${REFERENCE}"
+			(at -0.000001 -2.5 115)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "17881168-5c9c-49a9-b860-9c5763822137")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at 0 0 295)
+			(size 1.5 4)
+			(layers "B.Cu" "B.Paste" "B.Mask")
+			(roundrect_rratio 0.25)
+			(net 17 "unconnected-(H4-Pad1)")
+			(pinfunction "1")
+			(pintype "input+no_connect")
+			(thermal_bridge_angle 45)
+			(uuid "ba7088ab-ed2e-4f47-acb2-7e51027dbd4f")
+		)
+	)
 	(footprint "local:LED_combo_0805_5mmSMD_HandSolder"
 		(layer "B.Cu")
 		(uuid "40ed6d27-dd85-4133-b489-0fb7ab1e7355")
@@ -3685,7 +3895,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794977)
+			(mid -1.194978 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -4198,7 +4408,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794977)
+			(mid -1.194978 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -5632,7 +5842,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794977)
+			(mid -1.194978 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -6086,6 +6296,109 @@
 			)
 		)
 	)
+	(footprint "local:wire_pad"
+		(layer "B.Cu")
+		(uuid "911cd5ff-88ee-4f31-bb3c-774a14d31599")
+		(at 160.6 129.1 -135)
+		(property "Reference" "H2"
+			(at 0 0.499999 45)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "da74876b-d817-416c-9e5c-7e8cb3094c26")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 -1 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "322f53c2-e490-485a-a787-99558c81944f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Footprint" "local:wire_pad"
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "20832481-2e94-47e3-a852-fee985a08be3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b3daac30-db12-4265-8a03-1d270255d168")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ccaea58-e480-4715-b0b4-ebae270dff72")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/145f2dfe-12d3-4005-95b6-673bcd793147")
+		(sheetname "Root")
+		(sheetfile "ctfl-rakete-tht.kicad_sch")
+		(attr smd exclude_from_bom)
+		(fp_text user "${REFERENCE}"
+			(at 0 -2.5 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "4e0b84f1-12a5-48e8-92a0-b7f10fd41af8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at 0 0 225)
+			(size 1.5 4)
+			(layers "B.Cu" "B.Paste" "B.Mask")
+			(roundrect_rratio 0.25)
+			(net 15 "unconnected-(H2-Pad1)")
+			(pinfunction "1")
+			(pintype "input+no_connect")
+			(thermal_bridge_angle 45)
+			(uuid "e342fb0e-34d2-4783-b79b-3a3e44286bde")
+		)
+	)
 	(footprint "local:LED_0805_SMD_HandSolder"
 		(layer "B.Cu")
 		(uuid "a71160a5-ed55-4c23-a309-1215ac587fbe")
@@ -6264,7 +6577,7 @@
 		)
 		(fp_line
 			(start 1 0.599999)
-			(end 1 -0.600001)
+			(end 1 -0.600002)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -7806,7 +8119,7 @@
 		)
 		(fp_arc
 			(start -0.7 1)
-			(mid -1.194977 0.794977)
+			(mid -1.194978 0.794978)
 			(end -1.4 0.300001)
 			(stroke
 				(width 0.12)
@@ -8177,6 +8490,109 @@
 			(rotate
 				(xyz 0 0 0)
 			)
+		)
+	)
+	(footprint "local:wire_pad"
+		(layer "B.Cu")
+		(uuid "fe7695b6-c73d-42f7-ab14-596b7a39b9d1")
+		(at 180.7 109.6 -135)
+		(property "Reference" "H1"
+			(at 0 0.499999 45)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "99745bc7-e401-4248-965d-b9ff7c527581")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 -1 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "5bed2269-1f3f-479d-a72a-1bd96e923984")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Footprint" "local:wire_pad"
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fde599a5-d0e8-48f1-93df-edf820737537")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e49228f-aa59-46da-8a3d-4f47777d9494")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c122218a-9975-4205-af43-02c88d6cc3b4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/93f3ff3c-dfe3-4152-a397-2c023eaf8f47")
+		(sheetname "Root")
+		(sheetfile "ctfl-rakete-tht.kicad_sch")
+		(attr smd exclude_from_bom)
+		(fp_text user "${REFERENCE}"
+			(at 0 -2.5 45)
+			(unlocked yes)
+			(layer "B.Fab")
+			(uuid "f62ebc87-529e-44e8-8025-554075530847")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at 0 0 225)
+			(size 1.5 4)
+			(layers "B.Cu" "B.Paste" "B.Mask")
+			(roundrect_rratio 0.25)
+			(net 14 "unconnected-(H1-Pad1)")
+			(pinfunction "1")
+			(pintype "input+no_connect")
+			(thermal_bridge_angle 45)
+			(uuid "d19c3a35-8a6d-47cd-823f-99129627b718")
 		)
 	)
 	(gr_poly
