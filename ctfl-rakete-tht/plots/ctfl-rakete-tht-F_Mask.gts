@@ -1,12 +1,12 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,8.0.2-8.0.2-0~ubuntu22.04.1*
-G04 #@! TF.CreationDate,2024-05-25T22:25:35+02:00*
+G04 #@! TF.CreationDate,2024-05-28T23:24:15+02:00*
 G04 #@! TF.ProjectId,ctfl-rakete-tht,6374666c-2d72-4616-9b65-74652d746874,rev?*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 8.0.2-8.0.2-0~ubuntu22.04.1) date 2024-05-25 22:25:35*
+G04 Created by KiCad (PCBNEW 8.0.2-8.0.2-0~ubuntu22.04.1) date 2024-05-28 23:24:15*
 %MOMM*%
 %LPD*%
 G01*
