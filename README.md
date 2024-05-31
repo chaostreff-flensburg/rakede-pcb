@@ -22,16 +22,17 @@ Produce the PCBs with **red solder mask** and **white Silkscreen**.
 
 ## Part sourcing
 
-| reference | reichelt.de | price |
+| reference | reichelt.de | mouser.de |
 | --- | --- | --- |
-| BT1 | [KZH 20SMD](https://www.reichelt.de/knopfzellenclip-fuer-20-mm-smd-kzh-20smd-p56574.html) | € 0.60 |
-| SW1 | [SS SMD402](https://www.reichelt.de/schiebeschalter-1x-um-liegend-smd-ss-smd402-p112181.html) | € 1.10 |
-| U1  | [ATTINY212](https://www.reichelt.de/8-bit-attiny-avr-risc-mikrocontroller-2-kb-20-mhz-soic-8-attiny212-ssn-p335520.html) | € 0.90 |
-| 5mm LEDs | [EVERLIGHT 334-15/X1C5-6QSA/EU](https://www.reichelt.de/led-5-mm-bedrahtet-warmweiss-7150-mcd-50--led-el-5-7150ww-p164207.html) | 7 x € 0.31 = € 2.17 |
+| BT1 | [KZH 20SMD](https://www.reichelt.de/knopfzellenclip-fuer-20-mm-smd-kzh-20smd-p56574.html) | [BAT-HLD-003-SMT](https://www.mouser.de/ProductDetail/TE-Connectivity-Linx-Technologies/BAT-HLD-003-SMT) |
+| SW1 | [SS SMD402](https://www.reichelt.de/schiebeschalter-1x-um-liegend-smd-ss-smd402-p112181.html) | [MSS-102545-14A-V-SMT](https://www.mouser.de/ProductDetail/CUI-Devices/MSS-102545-14A-V-SMT) |
+| U1  | [ATTINY212](https://www.reichelt.de/8-bit-attiny-avr-risc-mikrocontroller-2-kb-20-mhz-soic-8-attiny212-ssn-p335520.html) | [ATTINY212-SSN](https://www.mouser.de/ProductDetail/Microchip-Technology/ATTINY212-SSN) |
+| SMD LEDs | - | [859-LTW-220DS5](https://www.mouser.de/ProductDetail/Lite-On/LTW-220DS5) |
+| 5mm LEDs | [EVERLIGHT 334-15/X1C5-6QSA/EU](https://www.reichelt.de/led-5-mm-bedrahtet-warmweiss-7150-mcd-50--led-el-5-7150ww-p164207.html) | [941-C512AWNSCZ0B0152](https://www.mouser.de/ProductDetail/Cree-LED/C512A-WNS-CZ0B0152) |
 
 ## Design ideas
 
-- combined footprint for 0603-1206 LEDs and 5 mm LEDs that have their legs folded up on one side
+- combined footprint for 0603-0805 LEDs and 5 mm LEDs that have their legs folded up on one side
 - 5 LED channels from ATtiny85
   - 3 LEDs on lighthouse top for fast sweeping animation
   - 2 groups of LEDs for the flame
