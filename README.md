@@ -57,5 +57,5 @@ I concrete terms we need to perform the following steps on our yource vector gra
 
 ## Default firmware
 
-The directory [defaultFirmware/](defaultFirmware/) holds an Arduino sketch that is meant to be used with the [megaTinyCore](https://github.com/SpenceKonde/megaTinyCore) board support package for Arduino and can then be uploaded using a programmer like [SerialUPDI](https://github.com/wagiminator/AVR-Programmer/tree/master/SerialUPDI_Programmer), e.g. the [Adafruit UPDI Friend](https://learn.adafruit.com/adafruit-updi-friend).
+The directory `defaultFirmware` holds an Arduino sketch that is meant to be used with the [megaTinyCore](https://github.com/SpenceKonde/megaTinyCore) board support package for Arduino and can then be uploaded using a programmer like [SerialUPDI](https://github.com/wagiminator/AVR-Programmer/tree/master/SerialUPDI_Programmer), e.g. the [Adafruit UPDI Friend](https://learn.adafruit.com/adafruit-updi-friend).
 
