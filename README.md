@@ -55,10 +55,7 @@ I concrete terms we need to perform the following steps on our yource vector gra
 | 0..2 | C1..2 | 0805 capacitor 100 nF | - | [80-C0805C104J5R](https://www.mouser.de/ProductDetail/KEMET/C0805C104J5RACTU?qs=gbgtKHXraGH15GhoNPXHBg%3D%3D) |
 | 0..1 | C3 | 0805 capacitor 1 uF | - | [963-UMK212B7105KG-T](https://www.mouser.de/ProductDetail/TAIYO-YUDEN/UMK212B7105KG-T?qs=PzICbMaShUdi76GLXMVYcA%3D%3D) |
 
-## Design ideas
+## Default firmware
 
-- combined footprint for 0603-0805 LEDs and 5 mm LEDs that have their legs folded up on one side
-- 5 LED channels from ATtiny85
-  - 3 LEDs on lighthouse top for fast sweeping animation
-  - 2 groups of LEDs for the flame
-  - connection points to Vbat next to the MCU pads under the MCU package to substitute the MCU with solder links for static light
+The directory [defaultFirmware/](defaultFirmware/) holds an Arduino sketch that is meant to be used with the [megaTinyCore](https://github.com/SpenceKonde/megaTinyCore) board support package for Arduino and can then be uploaded using a programmer like [SerialUPDI](https://github.com/wagiminator/AVR-Programmer/tree/master/SerialUPDI_Programmer), e.g. the [Adafruit UPDI Friend](https://learn.adafruit.com/adafruit-updi-friend).
+
