@@ -4875,7 +4875,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "local:PinSocket_1x03_P2.54mm_Horizontal_SMD"
 			(at 240.03 39.37 0)
 			(effects
 				(font

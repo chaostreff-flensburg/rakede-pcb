@@ -58,7 +58,9 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "silk_overlap|160142270|103597263|1c4e9820-99df-46c5-9adf-be7ebb302a3b|40b4f275-7c30-4b26-862e-a23307100a42"
+      ],
       "meta": {
         "version": 2
       },
@@ -79,6 +81,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -99,7 +102,7 @@
         "silk_over_copper": "ignore",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
-        "solder_mask_bridge": "error",
+        "solder_mask_bridge": "ignore",
         "starved_thermal": "error",
         "text_height": "warning",
         "text_thickness": "warning",
@@ -491,6 +494,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
