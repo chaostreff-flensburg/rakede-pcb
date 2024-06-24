@@ -39,6 +39,11 @@ void runLight() {
   static unsigned long next = 0;
   static unsigned long nextRestart = 0;
   static int state = 0;
+  
+  // TODO: change animation timing like this:
+  // 12 seconds for one rotation
+  // 3 pulses with 90° in between
+  // 500 ms from left to right
 
   if (millis() > next) {
     switch(state) {
