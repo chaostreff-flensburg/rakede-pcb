@@ -30,16 +30,16 @@ So the gemonetry we import into KiCAD has to be the negative of the red parts of
 Additionally the solder mask has to back up the silkscreen so that negative image also has to include our white parts.
 
 I concrete terms we need to perform the following steps on our yource vector grapfics to get the desired F.Mask geometry:
-1. Delete the letters as they don't interact with any red parts.
-2. Delete the yellow lighthous part at the top because it is clipped by all surrounding parts and itself does not clip any other.
-3. Combine the white and the red flame part into one.
-4. Subtract the yellow flame part from the formerly combined rest of the flame.
-5. Also subtract the dark grey socket part from the remaining flame.
-6. Combine all remaining red and white parts.
-7. Subtract the black outlines which shall poke through the solder mask and the silk screen. Now we have our positive image of the solder mask we want (plus the outline which we also want for positioning).
-8. Duplicate the outline and move the duplicate below our solder mask positive.
-9. Subtract the positive from the duplicate of the outline.
-10. Save as new SVG file (`F.Mask.svg`)
+1. Delete the yellow lighthous part at the top because it is clipped by all surrounding parts and itself does not clip any other.
+1. Combine the white and the red flame part into one.
+1. Subtract the yellow flame part from the formerly combined rest of the flame.
+1. Also subtract the dark grey socket part from the remaining flame.
+1. Combine all remaining red and white parts.
+1. Subtract the black outlines which shall poke through the solder mask and the silk screen. Now we have our positive image of the solder mask we want (plus the outline which we also want for positioning).
+1. Duplicate the outline and move the duplicate below our solder mask positive.
+1. Subtract the positive from the duplicate of the outline.
+1. Save as new SVG file (`F.Mask.svg`)
+1. Now you can import the SVG file to the appropriate layer in the pcb layout while scaling it by **1.85**.
 
 ## Part sourcing
 
