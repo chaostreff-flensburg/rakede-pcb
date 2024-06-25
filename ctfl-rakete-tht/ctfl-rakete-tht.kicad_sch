@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "ctfl-rakete-tht")
-		(date "2024-06-02")
-		(rev "Rev. A")
+		(date "2024-06-25")
+		(rev "Rev. B")
 		(company "Chaostreff Flensburg")
 		(comment 1 "designed by Jost Salathé")
 	)
