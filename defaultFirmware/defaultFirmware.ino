@@ -32,64 +32,69 @@ void setup() {
   // digitalWrite(PIN_FLAME_O, LOW);
 }
 
-void runLight() {
-  const int intervalMs = 33;
-  const int restartIntervalMs = 3000;
+void animateLightBlip(int offsetMs) {
+  if (offsetMs < 100) {
+    digitalWrite(PIN_LIGHT_L, HIGH);
+    digitalWrite(PIN_LIGHT_C, LOW);
+    digitalWrite(PIN_LIGHT_R, LOW);
+  } else if (offsetMs < 200) {
+    digitalWrite(PIN_LIGHT_L, HIGH);
+    digitalWrite(PIN_LIGHT_C, HIGH);
+    digitalWrite(PIN_LIGHT_R, LOW);
+  } else if (offsetMs < 300) {
+    digitalWrite(PIN_LIGHT_L, LOW);
+    digitalWrite(PIN_LIGHT_C, HIGH);
+    digitalWrite(PIN_LIGHT_R, LOW);
+  } else if (offsetMs < 400) {
+    digitalWrite(PIN_LIGHT_L, LOW);
+    digitalWrite(PIN_LIGHT_C, HIGH);
+    digitalWrite(PIN_LIGHT_R, HIGH);
+  } else if (offsetMs < 500) {
+    digitalWrite(PIN_LIGHT_L, LOW);
+    digitalWrite(PIN_LIGHT_C, LOW);
+    digitalWrite(PIN_LIGHT_R, HIGH);
+  } else {
+    digitalWrite(PIN_LIGHT_L, LOW);
+    digitalWrite(PIN_LIGHT_C, LOW);
+    digitalWrite(PIN_LIGHT_R, LOW);
+  }
+}
 
-  static unsigned long next = 0;
-  static unsigned long nextRestart = 0;
-  static int state = 0;
+void animateLight() {
+  const int framerateMs = 33;
+  const int animationDurationMs = 12000;
+
+  static unsigned long nextFrame = 0;
+  static unsigned long animationStartMs = 0;
   
-  // TODO: change animation timing like this:
+  // animation timing like 'Leuchtturm Norderney':
   // 12 seconds for one rotation
   // 3 pulses with 90° in between
   // 500 ms from left to right
 
-  if (millis() > next) {
-    switch(state) {
-    case 0:
-      digitalWrite(PIN_LIGHT_R, HIGH);
-      state = 1;
-      break;
-
-    case 1:
-      digitalWrite(PIN_LIGHT_R, LOW);
-      digitalWrite(PIN_LIGHT_C, HIGH);
-      state = 2;
-      break;
-
-    case 2:
-      digitalWrite(PIN_LIGHT_C, LOW);
-      digitalWrite(PIN_LIGHT_L, HIGH);
-      state = 3;
-      break;
-
-    case 3:
-      digitalWrite(PIN_LIGHT_L, LOW);
-      state = 4;
-      break;
-
-    default:
-      break;
+  if (millis() > nextFrame) {
+    nextFrame += framerateMs;
+    int sinceLastStartMs = millis() - animationStartMs;
+    if (sinceLastStartMs > animationDurationMs) {
+      animationStartMs += animationDurationMs;
+    } else if (sinceLastStartMs < 3000) {
+      animateLightBlip(sinceLastStartMs);
+    } else if (sinceLastStartMs < 6000) {
+      animateLightBlip(sinceLastStartMs - 3000);
+    } else if (sinceLastStartMs < 9000) {
+      animateLightBlip(sinceLastStartMs - 6000);
     }
-
-    if (millis() > nextRestart) {
-      state = 0;
-      nextRestart += restartIntervalMs;
-    }
-
-    next += intervalMs;
   }
 }
 
-void runFlame() {
+void animateFlame() {
   const uint8_t pwmDim = 192, pwmBright = 255;
-  const int intervalMs = 33;
+  const int framerateMs = 33;
 
-  static unsigned long next = 0;
+  static unsigned long nextFrame = 0;
   static int state = 0;
 
-  if (millis() > next) {
+  if (millis() > nextFrame) {
     switch (state) {
     case 0:
       analogWrite(PIN_FLAME_I, pwmDim);
@@ -111,11 +116,11 @@ void runFlame() {
       break;
     }
 
-    next += intervalMs;
+    nextFrame += framerateMs;
   }
 }
 
 void loop() {
-  runLight();
-  runFlame();
+  animateLight();
+  animateFlame();
 }
