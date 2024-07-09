@@ -88,8 +88,8 @@ void animateLight() {
 }
 
 void animateFlame() {
-  const uint8_t pwmDim = 192, pwmBright = 255;
-  const int framerateMs = 33;
+  const uint8_t pwmDim = 170, pwmBright = 255;
+  const int framerateMs = 60;
 
   static unsigned long nextFrame = 0;
   static int state = 0;
