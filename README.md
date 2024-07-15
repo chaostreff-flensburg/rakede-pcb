@@ -44,7 +44,7 @@ I concrete terms we need to perform the following steps on our yource vector gra
 ## Part sourcing
 
 | cnt THT | cnt THT-uC | SMD | reference | title | reichelt.de | mouser.de |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | 1 | 1 | 1 | BT1 | battery clip | [KZH 20SMD](https://www.reichelt.de/knopfzellenclip-fuer-20-mm-smd-kzh-20smd-p56574.html) | [BAT-HLD-003-SMT](https://www.mouser.de/ProductDetail/TE-Connectivity-Linx-Technologies/BAT-HLD-003-SMT?qs=TuK3vfAjtkVRZQIT6eTqjQ%3D%3D) |
 | 1 | 1 | 1 | SW1 | power switch | [SS SMD402](https://www.reichelt.de/schiebeschalter-1x-um-liegend-smd-ss-smd402-p112181.html) | [MSS-102545-14A-V-SMT](https://www.mouser.de/ProductDetail/CUI-Devices/MSS-102545-14A-V-SMT?qs=DRkmTr78QARl%2FtwuH8uRQg%3D%3D) |
 | 0 | 1 | 1 | U1 | microcontroller | [ATTINY212](https://www.reichelt.de/8-bit-attiny-avr-risc-mikrocontroller-2-kb-20-mhz-soic-8-attiny212-ssn-p335520.html) | [ATTINY212-SSN](https://www.mouser.de/ProductDetail/Microchip-Technology/ATTINY212-SSN?qs=3HJ2avRr9PJX8cJeG3zkDw%3D%3D) |
