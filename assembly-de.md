@@ -14,10 +14,12 @@ Bist du mit dem Sitz des Bauteils auf dem zugehörigen Footbrint zufrieden, verl
 
 ## Von Klein nach Groß und/oder von Innen nach Außen
 
-Arbeite von innen nach außen und von kleinen Bauteilen zu großen. Es mag zwar verlockend sein, mit den großen, einfach zu lötenden Teilen anzufangen, aber möglicherweise sind sie dir dann später im Weg.
+Arbeite von innen nach außen und von kleinen Bauteilen zu großen. Es mag zwar verlockend sein, mit den großen, einfach zu lötenden Teilen anzufangen, aber üblicherweise sind sie dir dann später im Weg.
 
 
 # Schwierigkeitsgrad 1: Mit Beinchen
+
+![fertig](img/tht_done_front.jpeg)
 
 ## Benötigte Bauteile
 
@@ -33,6 +35,41 @@ In empfohlener Bestückreihenfolge sortiert:
 
 ![THT Material](img/tht_materials.jpeg)
 
+## Montage
+
+Solange die Platine noch so schön leer ist, können die 5 Lötbrücken geschlossen werden, die die LEDs dauerhaft leuchten lassen, solange der Schalter an ist. Sie sind markiert mit der Beschriftung "LEDs on".
+
+![Lötbrücken](img/tht_ledon_solder.jpeg)
+
+Als erstes Bauteil sollte bei dieser Variante der Schalter montiert werden.
+
+![Schalter](img/all_switch_solder.jpeg)
+
+Damit die Knopfzelle guten Kontakt hat, sollte noch etwas Zinn auf den negativen Batteriekontakt auf der Platine gegeben werden. Aber auch nicht zu viel, sonst sitzt die Batterie nachher zu stramm.
+
+![Batteriekontakt Minus](img/all_batneg_solder.jpeg)
+
+Danach kann der Batteriehalter dadrübergelötet werden. Hierbei am besten die beiden Verbindungen zwischen Lötpads und Batteriehalter richtig mit Zinn fluten, damit die mechanische Klemmkraft der Batterie den Halter später nicht abreißt.
+
+![Batteriehalter](img/all_batpos_solder.jpeg)
+
+Jetzt gibt es Interpretationsspielraum, wie du die LEDs am liebsten montieren magst.
+
+Hauptsache ist, dass du die beiden Beinchen richtig verbindest.
+
+Das längere Beinchen ist Plus (auf der Platine mit "+" markiert), das kürzere Beinchen Minus. Aber selbst nachdem du die Beinchen gekürzt hast, kannst du das noch zuordnen, weil das Gehäuse der LED an der Minusseite etwas abgeflacht ist.
+
+Wenn du eine LED falsch herum einbaust, leuchtet sie einfach nicht. Versuche dann, sie andersherum einzubauen.
+
+![LED verlöten](img/tht_led_solder.jpeg)
+
+![LED verlötet](img/tht_led_soldered.jpeg)
+
+So könnten das dann zum Beispiel aussehen:
+
+![LEDs Flamme verlötet](img/tht_led_soldered_flame.jpeg)
+
+![LEDs oben verlötet](img/tht_led_soldered_light.jpeg)
 
 # Schwierigkeitsgrad 2: Mit Beinchen und Microcontroller
 
