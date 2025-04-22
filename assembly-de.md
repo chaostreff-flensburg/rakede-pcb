@@ -51,6 +51,8 @@ Damit die Knopfzelle guten Kontakt hat, sollte noch etwas Zinn auf den negativen
 
 Danach kann der Batteriehalter dadrübergelötet werden. Hierbei am besten die beiden Verbindungen zwischen Lötpads und Batteriehalter richtig mit Zinn fluten, damit die mechanische Klemmkraft der Batterie den Halter später nicht abreißt.
 
+Auf dem folgenden Bild sind die Stellen etwas zu sparsam ausgestattet:
+
 ![Batteriehalter](img/all_batpos_solder.jpeg)
 
 Jetzt gibt es Interpretationsspielraum, wie du die LEDs am liebsten montieren magst.
