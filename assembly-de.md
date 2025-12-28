@@ -75,7 +75,7 @@ So könnten das dann zum Beispiel aussehen:
 
 ![LEDs oben verlötet](img/tht_led_soldered_light.jpeg)
 
-# Schwierigkeitsgrad 2: Mit Beinchen und Microcontroller
+# Schwierigkeitsgrad 2: Mit Beinchen und Mircocontroller
 
 In empfohlener Bestückreihenfolge sortiert:
 
@@ -84,7 +84,7 @@ In empfohlener Bestückreihenfolge sortiert:
 | 1 | 1 | Platine |
 | 2 | 1 | Entkoppelkondensator 100 nF |
 | 3 | 1 | Stützkondensator 1 uF |
-| 1 | 1 | ATtiny212 Microcontroller |
+| 1 | 1 | ATtiny212 Mircocontroller |
 | 5 | 1 | Schalter |
 | 6 | 1 | Programmieranschluss (UPDI) |
 | 7 | 1 | Batteriehalter |
@@ -103,7 +103,7 @@ In empfohlener Bestückreihenfolge sortiert:
 | 1 |  1 | Platine |
 | 2 |  1 | Entkoppelkondensator 100 nF |
 | 3 |  1 | Stützkondensator 1 uF |
-| 1 |  1 | ATtiny212 Microcontroller |
+| 1 |  1 | ATtiny212 Mircocontroller |
 | 5 |  1 | Schalter |
 | 6 |  1 | Programmieranschluss (UPDI) |
 | 7 | 14 | weiße 0402 LEDs (seitenleuchtend, ca. 3V)  |
