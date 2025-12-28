@@ -12,6 +12,8 @@ So kann jetzt noch, falls erforderlich, die Position des Bauteils an dieser eine
 
 Bist du mit dem Sitz des Bauteils auf dem zugehörigen Footbrint zufrieden, verlötest du den/die übrigen Anschluss(-üsse) des Bauteils.
 
+![SMD Löttips von von Blinkyparts](img/SMD_soldering_tips_blinkyparts.jpg)
+
 ## Von Klein nach Groß und/oder von Innen nach Außen
 
 Arbeite von innen nach außen und von kleinen Bauteilen zu großen. Es mag zwar verlockend sein, mit den großen, einfach zu lötenden Teilen anzufangen, aber üblicherweise sind sie dir dann später im Weg.
