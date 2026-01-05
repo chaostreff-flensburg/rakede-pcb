@@ -77,6 +77,8 @@ So könnten das dann zum Beispiel aussehen:
 
 # Schwierigkeitsgrad 2: Mit Beinchen und Mircocontroller
 
+## Benötigte Bauteile
+
 In empfohlener Bestückreihenfolge sortiert:
 
 | Nummer | Anzahl |Name |
@@ -93,8 +95,27 @@ In empfohlener Bestückreihenfolge sortiert:
 
 ![SMTHT Material](img/smtht_materials.jpeg)
 
+## Montagehinweise
+
+Zur Montage des Schwierigkeitsgrads 1 ändert sich folgendes:
+- Es wird zusätzlich ein Microcontroller mit ein paar Hilfsbauteilen aufgelötet
+  - 2 SMD-Kondensatoren zur Stabilisierung der Controllerversorgung
+  - Programmieranschluss
+- Die 5 Lötbrücken werden nicht gesetzt - ihre Aufgabe wird von dem Microcontroller übernommen
+
+Die Orientierung des Microcontrollers sollte unbedingt beachtet werden.
+Auf dem Controllergehäuse ist ein Punkt bei Pin 1.
+Passend dazu ist auf der Platine an Pin 1 ein kleiner Pfeil.
+
+![ATTINY orientation](img/ctfl-rakete-pcb-back.png)
+
+Die beiden Kondensatoren sind parallel geschaltet und dienen nur zur Stabilisierung der Versorgungsspannung des Microcontrollers.
+Es ist nicht so wichtig, welcher von beiden wo sitzt.
+Und falls einer oder beide verloren gehen, ist das auch nicht so schlimm.
 
 # Schwierigkeitsgrad 3: Beinfrei
+
+## Benötigte Bauteile
 
 In empfohlener Bestückreihenfolge sortiert:
 
@@ -112,3 +133,18 @@ In empfohlener Bestückreihenfolge sortiert:
 
 ![SMD Material](img/smd_materials.jpeg)
 
+## Montagehinweise
+
+Zur Montage des Schwierigkeitsgrads 2 ändert sich folgendes:
+- die 7 5mm LEDs werden ersetzt durch 14 zur Seite leuchtende SMD-LEDs
+
+Die Polarität der LEDs ist dabei unbedingt zu beachten:
+
+![SMD-LED Polarität](img/smd_led_polarity.jpeg)
+
+Verwende am besten eine Pinzette, um die LED in Position zu halten, während du die erste Seite festlötest:
+
+![SMD-LED festlöten](img/smd_led_solder.jpeg)
+
+Es werden 14 LEDs benötigt.
+Da die kleinen LEDs leicht einmal verloren gehen, legen wir den Kits normalerweise 16 LEDs bei.
