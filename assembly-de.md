@@ -127,7 +127,7 @@ In empfohlener Bestückreihenfolge sortiert:
 | 1 |  1 | ATtiny212 Mircocontroller |
 | 5 |  1 | Schalter |
 | 6 |  1 | Programmieranschluss (UPDI) |
-| 7 | 14 | weiße 0402 LEDs (seitenleuchtend, ca. 3V)  |
+| 7 | 14 | weiße SMD-LEDs (seitenleuchtend, ca. 3V)  |
 | 8 |  1 | Batteriehalter |
 | 9 |  1 | CR2032 Knopfzellenbatterie |
 
