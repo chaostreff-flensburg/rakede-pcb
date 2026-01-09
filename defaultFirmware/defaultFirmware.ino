@@ -34,55 +34,53 @@ void setup() {
 
 void animateLightBlip(int offsetMs) {
   if (offsetMs < 100) {
-    digitalWrite(PIN_LIGHT_L, HIGH);
+    digitalWrite(PIN_LIGHT_R, HIGH);
     digitalWrite(PIN_LIGHT_C, LOW);
-    digitalWrite(PIN_LIGHT_R, LOW);
+    digitalWrite(PIN_LIGHT_L, LOW);
   } else if (offsetMs < 200) {
+    digitalWrite(PIN_LIGHT_R, HIGH);
+    digitalWrite(PIN_LIGHT_C, HIGH);
+    digitalWrite(PIN_LIGHT_L, LOW);
+  } else if (offsetMs < 4000) {
+    digitalWrite(PIN_LIGHT_R, HIGH);
+    digitalWrite(PIN_LIGHT_C, HIGH);
     digitalWrite(PIN_LIGHT_L, HIGH);
-    digitalWrite(PIN_LIGHT_C, HIGH);
+  } else if (offsetMs < 4100) {
     digitalWrite(PIN_LIGHT_R, LOW);
-  } else if (offsetMs < 300) {
-    digitalWrite(PIN_LIGHT_L, LOW);
     digitalWrite(PIN_LIGHT_C, HIGH);
+    digitalWrite(PIN_LIGHT_L, HIGH);
+  } else if (offsetMs < 4200) {
     digitalWrite(PIN_LIGHT_R, LOW);
-  } else if (offsetMs < 400) {
-    digitalWrite(PIN_LIGHT_L, LOW);
-    digitalWrite(PIN_LIGHT_C, HIGH);
-    digitalWrite(PIN_LIGHT_R, HIGH);
-  } else if (offsetMs < 500) {
-    digitalWrite(PIN_LIGHT_L, LOW);
     digitalWrite(PIN_LIGHT_C, LOW);
-    digitalWrite(PIN_LIGHT_R, HIGH);
+    digitalWrite(PIN_LIGHT_L, HIGH);
   } else {
-    digitalWrite(PIN_LIGHT_L, LOW);
-    digitalWrite(PIN_LIGHT_C, LOW);
     digitalWrite(PIN_LIGHT_R, LOW);
+    digitalWrite(PIN_LIGHT_C, LOW);
+    digitalWrite(PIN_LIGHT_L, LOW);
   }
 }
 
 void animateLight() {
   const int framerateMs = 33;
-  const int animationDurationMs = 12000;
+  const int animationDurationMs = 8000;
 
   static unsigned long nextFrame = 0;
   static unsigned long animationStartMs = 0;
   
-  // animation timing like 'Leuchtturm Norderney':
-  // 12 seconds for one rotation
-  // 3 pulses with 90° in between
-  // 500 ms from left to right
+  // animation timing like 'Leuchtturm Kalkgrund':
+  // (see https://www.deutsche-leuchtfeuer.de/ostsee/kalkgrund.html)
+  // Iso WRG 8 s   [4+(4)]
+  // 8 seconds for one rotation
+  // 4 seconds on, 4 senconds off
+  // fading from right to left (simulating clockwise rotation)
 
   if (millis() > nextFrame) {
     nextFrame += framerateMs;
     int sinceLastStartMs = millis() - animationStartMs;
     if (sinceLastStartMs > animationDurationMs) {
       animationStartMs += animationDurationMs;
-    } else if (sinceLastStartMs < 3000) {
+    } else {
       animateLightBlip(sinceLastStartMs);
-    } else if (sinceLastStartMs < 6000) {
-      animateLightBlip(sinceLastStartMs - 3000);
-    } else if (sinceLastStartMs < 9000) {
-      animateLightBlip(sinceLastStartMs - 6000);
     }
   }
 }
