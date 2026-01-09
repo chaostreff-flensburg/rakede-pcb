@@ -57,7 +57,6 @@ I concrete terms we need to perform the following steps on our yource vector gra
 ## Default firmware
 
 The directory `defaultFirmware` holds an Arduino sketch that is meant to be used with the [megaTinyCore](https://github.com/SpenceKonde/megaTinyCore) board support package for Arduino and can then be uploaded using a programmer like [SerialUPDI](https://github.com/wagiminator/AVR-Programmer/tree/master/SerialUPDI_Programmer), e.g. the [Adafruit UPDI Friend](https://learn.adafruit.com/adafruit-updi-friend).
-Battery:BatteryHolder_Multicomp_BC-2001_1x2032
 
 The logo on the PCB and the blinking pattern are based on the [lighthouse Kalkgrund](https://www.deutsche-leuchtfeuer.de/ostsee/kalkgrund.html).
 
