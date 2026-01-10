@@ -58,5 +58,7 @@ I concrete terms we need to perform the following steps on our yource vector gra
 
 The directory `defaultFirmware` holds an Arduino sketch that is meant to be used with the [megaTinyCore](https://github.com/SpenceKonde/megaTinyCore) board support package for Arduino and can then be uploaded using a programmer like [SerialUPDI](https://github.com/wagiminator/AVR-Programmer/tree/master/SerialUPDI_Programmer), e.g. the [Adafruit UPDI Friend](https://learn.adafruit.com/adafruit-updi-friend).
 
+Tkae care to select the correct Chip in Arduino under `Tools -> Chip -> ATtiny212` as well as the correct clock under `Tools -> Clock -> "5 MHz internal"`
+
 The logo on the PCB and the blinking pattern are based on the [lighthouse Kalkgrund](https://www.deutsche-leuchtfeuer.de/ostsee/kalkgrund.html).
 
