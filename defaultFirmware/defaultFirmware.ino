@@ -64,10 +64,10 @@ void animateLightBlip(uint16_t msSinceStart) {
   }
 }
 
-void animateLight(unsigned long nowMs) {
-  const uint16_t ANIMATION_INTERVAL_MS = 8000;
+void animateLight(unsigned long nowUs) {
+  const uint32_t ANIMATION_INTERVAL_US = 8000ul * 1000ul;
 
-  static unsigned long animationStartMs = 0;
+  static unsigned long animationStartUs = 0;
   
   // animation timing like 'Leuchtturm Kalkgrund':
   // (see https://www.deutsche-leuchtfeuer.de/ostsee/kalkgrund.html)
@@ -76,42 +76,43 @@ void animateLight(unsigned long nowMs) {
   // 4 seconds on, 4 senconds off
   // fading from right to left (simulating clockwise rotation)
 
-  uint16_t msSinceAnimationStart = nowMs - animationStartMs;
-  if (msSinceAnimationStart > ANIMATION_INTERVAL_MS) {
-    animationStartMs += ANIMATION_INTERVAL_MS;
-    msSinceAnimationStart -= ANIMATION_INTERVAL_MS;
+  uint32_t usSinceAnimationStart = nowUs - animationStartUs;
+  if (usSinceAnimationStart > ANIMATION_INTERVAL_US) {
+    animationStartUs += ANIMATION_INTERVAL_US;
+    usSinceAnimationStart -= ANIMATION_INTERVAL_US;
   }
 
-  animateLightBlip(msSinceAnimationStart);
+  animateLightBlip(usSinceAnimationStart / 1000);
 }
 
-void animateFlame(unsigned long nowMs) {
-  const uint8_t pwmDim = 66, pwmBright = 100;
-  const int framerateMs = 60;
+void animateFlame(unsigned long nowUs) {
+  const uint8_t PWM_DIM = 66;
+  const uint8_t PWM_BRIGHT = 100;
+  const uint16_t FRAMETIME_US = 60ul * 1000ul;
 
-  static unsigned long nextFrame = 0;
+  static unsigned long nextFrameUs = 0;
   static int state = 0;
 
-  if (nowMs > nextFrame) {
-    nextFrame += framerateMs;
+  if (nowUs > nextFrameUs) {
+    nextFrameUs += FRAMETIME_US;
 
     switch (state) {
     case 0:
-      ledBrightness[LedIndexFlameI] = pwmDim;
-      ledBrightness[LedIndexFlameO] = pwmDim;
+      ledBrightness[LedIndexFlameI] = PWM_DIM;
+      ledBrightness[LedIndexFlameO] = PWM_DIM;
       state = 1;
       break;
 
     case 1:
-      ledBrightness[LedIndexFlameI] = pwmBright;
-      ledBrightness[LedIndexFlameO] = pwmDim;
+      ledBrightness[LedIndexFlameI] = PWM_BRIGHT;
+      ledBrightness[LedIndexFlameO] = PWM_DIM;
       state = 2;
       break;
 
     case 2:
     default:
-      ledBrightness[LedIndexFlameI] = pwmDim;
-      ledBrightness[LedIndexFlameO] = pwmBright;
+      ledBrightness[LedIndexFlameI] = PWM_DIM;
+      ledBrightness[LedIndexFlameO] = PWM_BRIGHT;
       state = 0;
       break;
     }
@@ -130,8 +131,8 @@ void loop() {
     // advance pulseStart_us, calculate animation and turn on LEDS if required 
     pulseStartUs += PULSE_INTERVAL_US;
 
-    animateLight(pulseStartUs / 1000);
-    animateFlame(pulseStartUs / 1000);
+    animateLight(pulseStartUs);
+    animateFlame(pulseStartUs);
 
     if (globalBrightness > 0) {
       if (ledBrightness[LedIndexLightL] > 0)
