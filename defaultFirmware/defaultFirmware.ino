@@ -16,7 +16,7 @@ const int ledPins[LedIndexMax] = {
   PIN_PA2  // FlameO
 };
 
-//const uint16_t VCC_LOW_CUTOFF = 2800; // low voltage cutoff to protect Li-Ion cells
+//const uint16_t VCC_LOW_CUTOFF_MV = 2800; // low voltage cutoff to protect Li-Ion cells
 const uint16_t VCC_LOW_CUTOFF_MV = 2400; // low voltage cutoff to indicate that battery is really empty (NOT FOR Li-Ion!)
 const uint16_t VCC_DIMMING_LOW_END_MV = 2800; // voltage above which globalBrightness is reduced to conserve energy
 const uint32_t VCC_DIMMING_FACTOR = 200;
@@ -36,7 +36,7 @@ void setup() {
     digitalWrite(ledPins[iLed], LOW);
   }
 
-  analogReference(INTERNAL2V5); // set reference to the desired voltage, and set that as the ADC reference.
+  analogReference(INTERNAL1V5); // set reference to the desired voltage, and set that as the ADC reference.
   analogReference(VDD); // Set the ADC reference to VDD. Voltage selected previously is still the selected, just not set as the ADC reference.
   uint16_t reading = analogRead(ADC_INTREF); //first reading might be inaccturate
   (void) reading; // to suppress unused variable warning
@@ -50,7 +50,7 @@ void setup() {
 }
 
 void adaptToVcc() {
-  const uint32_t intermediate = 1023ul * 2500;
+  const uint32_t intermediate = 1023ul * 1500;
   uint16_t reading = analogRead(ADC_INTREF);
   uint16_t vccMv = intermediate / reading;
   if (vccMv < VCC_LOW_CUTOFF_MV) {
