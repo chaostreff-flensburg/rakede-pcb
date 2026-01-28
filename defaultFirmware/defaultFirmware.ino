@@ -32,16 +32,14 @@ uint8_t ledBrightness[LedIndexMax] = {0};
 
 void setup() {
   for (int iLed = 0; iLed < LedIndexMax; iLed++) {
-    pinMode(iLed, OUTPUT);
+    pinMode(ledPins[iLed], OUTPUT);
+    digitalWrite(ledPins[iLed], LOW);
   }
 
   analogReference(INTERNAL2V5); // set reference to the desired voltage, and set that as the ADC reference.
   analogReference(VDD); // Set the ADC reference to VDD. Voltage selected previously is still the selected, just not set as the ADC reference.
   uint16_t reading = analogRead(ADC_INTREF); //first reading might be inaccturate
   (void) reading; // to suppress unused variable warning
-
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  sleep_enable();
 
   // while(1) for (int iLed = 0; iLed < LedIndexMax; iLed++) {
   //   digitalWrite(iLed, HIGH);
@@ -56,6 +54,12 @@ void adaptToVcc() {
   uint16_t reading = analogRead(ADC_INTREF);
   uint16_t vccMv = intermediate / reading;
   if (vccMv < VCC_LOW_CUTOFF_MV) {
+    for (int iLed = 0; iLed < LedIndexMax; iLed++) {
+      digitalWrite(ledPins[iLed], LOW);
+      pinMode(ledPins[iLed], INPUT);
+    }
+    set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+    sleep_enable();
     sleep_cpu();
   }
   //set globalBrightness according to Vcc
