@@ -18,8 +18,12 @@ const int ledPins[LedIndexMax] = {
 
 //const uint16_t VCC_LOW_CUTOFF_MV = 2800; // low voltage cutoff to protect Li-Ion cells
 const uint16_t VCC_LOW_CUTOFF_MV = 2400; // low voltage cutoff to indicate that battery is really empty (NOT FOR Li-Ion!)
+// following parameters result in roughly 10 mA on average (about 7 h runtime on a LIR2032H (70 mAh) until UVLO = 2.8 V)
 const uint16_t VCC_DIMMING_LOW_END_MV = 2800; // voltage above which globalBrightness is reduced to conserve energy
 const uint32_t VCC_DIMMING_FACTOR = 80; // increase this value if you want the LEDs to be brighter
+// following parameters result in roughly 20 mA on average (about 3.5 h runtime on a LIR2032H (70 mAh) until UVLO = 2.8 V)
+//const uint16_t VCC_DIMMING_LOW_END_MV = 2800; // voltage above which globalBrightness is reduced to conserve energy
+//const uint32_t VCC_DIMMING_FACTOR = 200; // increase this value if you want the LEDs to be brighter
 
 
 // soft PWM using micros() with target frequency of 100 Hz
