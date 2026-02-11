@@ -31,7 +31,13 @@ const uint32_t VCC_DIMMING_FACTOR = 80; // increase this value if you want the L
 const uint8_t GLOBAL_BRIGHTNESS_MAX = 100;
 const uint8_t INDIVIDUAL_BRIGHTNESS_MAX = 100;
 uint8_t globalBrightness = GLOBAL_BRIGHTNESS_MAX;
-uint8_t ledBrightness[LedIndexMax] = {0};
+uint8_t ledBrightness[LedIndexMax] = {
+  0,
+  0,
+  0,
+  0,
+  0
+};
 
 
 void setup() {
@@ -72,13 +78,13 @@ void adaptToVcc() {
     uint16_t brightness = GLOBAL_BRIGHTNESS_MAX * VCC_DIMMING_FACTOR
                           / (vccMv - VCC_DIMMING_LOW_END_MV + VCC_DIMMING_FACTOR);
 
-    if (brightness > 100) {
-      globalBrightness = 100;
+    if (brightness > GLOBAL_BRIGHTNESS_MAX) {
+      globalBrightness = GLOBAL_BRIGHTNESS_MAX;
     } else {
       globalBrightness = brightness;
     }
   } else {
-    globalBrightness = 100;
+    globalBrightness = GLOBAL_BRIGHTNESS_MAX;
   }
 }
 
@@ -92,25 +98,25 @@ void adaptToVcc() {
 
 void animateLightBlip(uint16_t msSinceStart) {
   if (msSinceStart < 100) {
-    ledBrightness[LedIndexLightR] = 100;
+    ledBrightness[LedIndexLightR] = INDIVIDUAL_BRIGHTNESS_MAX;
     ledBrightness[LedIndexLightC] = 0;
     ledBrightness[LedIndexLightL] = 0;
   } else if (msSinceStart < 200) {
-    ledBrightness[LedIndexLightR] = 100;
-    ledBrightness[LedIndexLightC] = 100;
+    ledBrightness[LedIndexLightR] = INDIVIDUAL_BRIGHTNESS_MAX;
+    ledBrightness[LedIndexLightC] = INDIVIDUAL_BRIGHTNESS_MAX;
     ledBrightness[LedIndexLightL] = 0;
   } else if (msSinceStart < 4000) {
-    ledBrightness[LedIndexLightR] = 100;
-    ledBrightness[LedIndexLightC] = 100;
-    ledBrightness[LedIndexLightL] = 100;
+    ledBrightness[LedIndexLightR] = INDIVIDUAL_BRIGHTNESS_MAX;
+    ledBrightness[LedIndexLightC] = INDIVIDUAL_BRIGHTNESS_MAX;
+    ledBrightness[LedIndexLightL] = INDIVIDUAL_BRIGHTNESS_MAX;
   } else if (msSinceStart < 4100) {
     ledBrightness[LedIndexLightR] = 0;
-    ledBrightness[LedIndexLightC] = 100;
-    ledBrightness[LedIndexLightL] = 100;
+    ledBrightness[LedIndexLightC] = INDIVIDUAL_BRIGHTNESS_MAX;
+    ledBrightness[LedIndexLightL] = INDIVIDUAL_BRIGHTNESS_MAX;
   } else if (msSinceStart < 4200) {
     ledBrightness[LedIndexLightR] = 0;
     ledBrightness[LedIndexLightC] = 0;
-    ledBrightness[LedIndexLightL] = 100;
+    ledBrightness[LedIndexLightL] = INDIVIDUAL_BRIGHTNESS_MAX;
   } else {
     ledBrightness[LedIndexLightR] = 0;
     ledBrightness[LedIndexLightC] = 0;
@@ -134,8 +140,8 @@ void animateLight(unsigned long nowUs) {
 
 
 void animateFlame(unsigned long nowUs) {
-  const uint8_t PWM_DIM = 66;
-  const uint8_t PWM_BRIGHT = 100;
+  const uint8_t PWM_DIM = INDIVIDUAL_BRIGHTNESS_MAX/3*2;
+  const uint8_t PWM_BRIGHT = INDIVIDUAL_BRIGHTNESS_MAX;
   const uint16_t FRAMETIME_US = 60ul * 1000;
 
   static unsigned long nextFrameUs = 0;
