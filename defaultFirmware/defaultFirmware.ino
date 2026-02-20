@@ -143,33 +143,29 @@ void animateFlame(unsigned long nowUs) {
   const uint8_t PWM_DIM = INDIVIDUAL_BRIGHTNESS_MAX/3*2;
   const uint8_t PWM_BRIGHT = INDIVIDUAL_BRIGHTNESS_MAX;
   const uint16_t FRAMETIME_US = 60ul * 1000;
+  unsigned long nowFrame = nowUs / FRAMETIME_US;
+  static unsigned long lastFrame = 0;
 
-  static unsigned long nextFrameUs = 0;
-  static int state = 0;
-
-  if (nowUs > nextFrameUs) {
-    nextFrameUs += FRAMETIME_US;
-
-    switch (state) {
+  if (nowFrame != lastFrame) {
+    switch (nowFrame % 3) {
     case 0:
       ledBrightness[LedIndexFlameI] = PWM_DIM;
       ledBrightness[LedIndexFlameO] = PWM_DIM;
-      state = 1;
       break;
 
     case 1:
       ledBrightness[LedIndexFlameI] = PWM_BRIGHT;
       ledBrightness[LedIndexFlameO] = PWM_DIM;
-      state = 2;
       break;
 
     case 2:
     default:
       ledBrightness[LedIndexFlameI] = PWM_DIM;
       ledBrightness[LedIndexFlameO] = PWM_BRIGHT;
-      state = 0;
       break;
     }
+
+    lastFrame = nowFrame;
   }
 }
 
